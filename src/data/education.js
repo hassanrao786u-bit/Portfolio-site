@@ -6,7 +6,7 @@ export const education = [
     status: 'in-progress',
     description:
       'Pursuing a comprehensive degree in Computer Science, covering algorithms, data structures, software engineering, and modern web development practices.',
-    logo: '/vu-logo.svg',
+    logo: '/vu.png',
   },
   {
     title: 'MERN Stack Development Course',

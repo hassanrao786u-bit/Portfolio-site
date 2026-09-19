@@ -11,7 +11,7 @@ export const personalInfo = {
   resumeUrl: '/Resume.pdf',
   available: true,
   social: {
-    github: 'https://github.com/hassanrao786',
+    github: 'https://github.com/hassanrao786u-bit',
     linkedin: 'https://www.linkedin.com/in/hassanrao786/',
     email: 'hassanrao786u@gmail.com',
     whatsapp: 'https://wa.me/923186718114?text=Assalam%20o%20Alaikum%20Muhammad%2C%20I%20visited%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20project.',

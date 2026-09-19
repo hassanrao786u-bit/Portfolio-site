@@ -18,7 +18,7 @@ export const projects = [
     liveDemoUrl: 'https://full-stack-ems-one.vercel.app/',
   },
   {
-    title: 'Forever Clothing E-Commerce Store',
+    title: 'Forever Clothing E-Commerce Store with AI Assistance',
     description:
       'A full-stack clothing store with a customer storefront and separate admin panel for managing products and orders. The MERN application is organized into independent frontend, backend, and admin modules.',
     tech: ['React', 'Node.js', 'Express', 'MongoDB'],

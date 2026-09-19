@@ -14,11 +14,7 @@ const socials = [
     url: personalInfo.social.linkedin,
     icon: FaLinkedin,
   },
-  {
-    name: 'Email',
-    url: `mailto:${personalInfo.social.email}`,
-    icon: FaEnvelope,
-  },
+
   {
     name: 'WhatsApp',
     url: personalInfo.social.whatsapp,
@@ -55,7 +51,7 @@ export default function Contact() {
               <motion.a
                 key={social.name}
                 href={social.url}
-                target={social.name === 'Email' ? undefined : '_blank'}
+                target="_blank"
                 rel="noopener noreferrer"
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
@@ -73,7 +69,7 @@ export default function Contact() {
         </div>
 
         <motion.a
-          href={`mailto:${personalInfo.social.email}`}
+          href={`https://mail.google.com/mail/?view=cm&fs=1&to=${personalInfo.social.email}`}
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

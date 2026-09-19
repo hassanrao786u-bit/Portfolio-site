@@ -78,15 +78,15 @@ export default function Hero() {
             </a>
 
             <Link
-              to="projects"
-              smooth={true}
-              duration={500}
-              offset={-64}
-              className="group inline-flex cursor-pointer items-center gap-2 rounded-md border border-white/20 px-6 py-3 text-sm font-semibold text-white transition-all hover:border-accent hover:text-accent hover:shadow-lg hover:shadow-accent/10 sm:text-base md:border md:bg-transparent md:text-white md:hover:border-accent md:hover:text-accent md:hover:scale-105 bg-accent border-accent text-bg-primary hover:bg-accent-hover hover:border-accent-hover md:bg-transparent md:text-white md:border-white/20"
-            >
-              <Code2 size={18} />
-              View Projects
-            </Link>
+            to="projects"
+            smooth="easeOutCubic"
+            duration={400}
+            offset={-64}
+            className="group inline-flex cursor-pointer items-center gap-2 rounded-md bg-accent px-6 py-3 text-sm font-semibold text-bg-primary transition-all hover:scale-105 hover:bg-accent-hover hover:shadow-lg hover:shadow-accent/30 sm:text-base"
+          >
+            <Code2 size={18} />
+            View Projects
+          </Link>
 
             <Link
               to="contact"
@@ -104,57 +104,51 @@ export default function Hero() {
           </motion.div>
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, scale: 0.85 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.4, duration: 0.6 }}
-          className="order-1 flex justify-center lg:order-2 lg:justify-end"
-        >
-          <div className="relative">
             <motion.div
-              animate={{ y: [0, -12, 0] }}
-              transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
-              className="relative"
-            >
-              <div className="absolute inset-0 rounded-full bg-accent/20 blur-3xl" />
-
-              <div className="relative h-56 w-56 overflow-hidden rounded-full border-4 border-accent/30 sm:h-64 sm:w-64 md:h-80 md:w-80">
-                <img
-                  src={personalInfo.profilePhoto}
-                  alt={personalInfo.name}
-                  className="h-full w-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-bg-primary/40 to-transparent" />
-              </div>
-
-              <div className="absolute -bottom-2 -right-2 flex items-center gap-2 rounded-full border border-accent/30 bg-bg-card px-4 py-2 shadow-lg sm:-bottom-3 sm:-right-3">
-                <span className="relative flex h-2.5 w-2.5">
-                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-75" />
-                  <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-accent" />
-                </span>
-                <span className="text-xs font-semibold text-accent sm:text-sm">
-                  Available for hire
-                </span>
-              </div>
-            </motion.div>
-          </div>
-        </motion.div>
-      </div>
-
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.2 }}
-        className="absolute bottom-6 left-1/2 -translate-x-1/2"
+        initial={{ opacity: 0, scale: 0.85 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ delay: 0.4, duration: 0.6 }}
+        className="order-1 flex justify-center lg:order-2 lg:justify-end"
       >
-        <div className="flex h-10 w-6 items-start justify-center rounded-full border-2 border-muted/40 p-1.5">
-          <motion.div
-            animate={{ y: [0, 12, 0] }}
-            transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
-            className="h-1.5 w-1.5 rounded-full bg-accent"
-          />
+        <div className="relative">
+          <div className="absolute inset-0 rounded-full bg-accent/20 blur-3xl" />
+
+          <div className="relative h-64 w-64 overflow-hidden rounded-full border-4 border-accent/30 sm:h-72 sm:w-72 md:h-96 md:w-96">
+            <img
+              src={personalInfo.profilePhoto}
+              alt={personalInfo.name}
+              className="h-full w-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-bg-primary/40 to-transparent" />
+          </div>
+
+          <div className="absolute -bottom-2 -right-2 flex items-center gap-2 rounded-full border border-accent/30 bg-bg-card px-4 py-2 shadow-lg sm:-bottom-3 sm:-right-3">
+            <span className="relative flex h-2.5 w-2.5">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-75" />
+              <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-accent" />
+            </span>
+            <span className="text-xs font-bold text-accent sm:text-sm">
+              Available for hire
+            </span>
+          </div>
         </div>
       </motion.div>
+      </div>
+
+     <motion.div
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  transition={{ delay: 1.2 }}
+  className="absolute bottom-6 left-1/2 hidden -translate-x-1/2 md:block"
+>
+  <div className="flex h-10 w-6 items-start justify-center rounded-full border-2 border-muted/40 p-1.5">
+    <motion.div
+      animate={{ y: [0, 12, 0] }}
+      transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
+      className="h-1.5 w-1.5 rounded-full bg-accent"
+    />
+  </div>
+</motion.div>
     </section>
   );
 }
